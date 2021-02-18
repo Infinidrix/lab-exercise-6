@@ -25,6 +25,13 @@ function forINLoop() {
     //     <li class="list-group-item" >${Key} : ${Value}</li>
 
     // `;
+    for (Key in student){
+        forInLoop.innerHTML +=
+            `
+            <li class="list-group-item" >${Key} : ${student[Key]}</li>
+    
+        `; 
+    }
 
 }
 
@@ -47,5 +54,15 @@ function forOFLoop() {
     //     <li class="list-group-item" >Name : Abebe</li>
 
     // `;
+
+    for (student of students){
+        for (Key in student){
+            forOfLoop.innerHTML +=
+                `
+                <li class="list-group-item" >${Key} : ${student[Key]}</li>
+        
+            `; 
+        }
+    }
 
 }
